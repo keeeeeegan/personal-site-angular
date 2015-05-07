@@ -1,4 +1,4 @@
-keeeeeegan.github.io
+personal site
 ====================
 
-Personal site/splash page
+Personal page, built in angular
