@@ -1,0 +1,141 @@
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: helvetica, arial, tahoma, sans-serif;
+  font-size: 11px;
+
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  font-family: arial, tahoma, sans-serif;
+  font-size: 14px;
+}
+
+a:link,
+a:visited,
+a:active,
+a:hover {
+color: #000;
+  text-decoration: underline;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  height: 80px;
+  background-color: #000;
+}
+
+header .header-content {
+  width: 700px;
+  margin: 0 auto;
+}
+
+header .header-content .name {
+  text-transform: uppercase;
+}
+
+footer {
+  font-size: 11px;
+  opacity: 0.8;
+  width: 700px;
+  margin: 0 auto;
+  margin-top: 110px;
+}
+
+.logo {
+  background-image: url('img/newnewglassesheader.png');
+  background-color: transparent;
+  width: 300px;
+  display: block;
+  height: 0;
+  padding-top: 80px;
+  background-position: 0% 0%;
+  width: 150px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  max-width: 110px;
+  background-size: contain;
+  /* padding-top: 80px; */
+  /*border-top: solid black 9px;*/
+  position: relative;
+  top: 9px;
+}
+
+.logo:hover {
+  background-image: url('img/nameheaderhover.png');
+}
+
+.logo {
+  transition: all 0.5s ease;
+}
+
+.content-container {
+  padding-top: 100px;
+}
+
+.content {
+  width: 700px;
+  margin: 0 auto;
+}
+
+
+.page {
+  padding: 23px 35px;
+  background: #EDEDED;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
+  overflow: auto;
+}
+
+.page-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #000;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 35px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #333;
+}
+
+.page-title > span {
+  float: right;
+  opacity: 0.7;
+}
+
+.page-title.smaller {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+img.desaturate { filter: grayscale(100%); }
+img.desaturate { -webkit-filter: grayscale(100%); filter: grayscale(100%); }
+img.circle {
+  border-radius: 50%;
+}
+
+.thing-display {
+  background: white;
+  border-radius: 3px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+}
+
+.thing-display > p {
+  margin-bottom: 0;
+}
+
+
+
+.page-title {
+  border-bottom: 1px solid #ccc;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 18px;
+}
