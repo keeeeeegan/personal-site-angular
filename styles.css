@@ -28,12 +28,13 @@ a:hover {
 
 header {
   height: 80px;
-  background-color: #000;
+  background-color: #1F1F1F;
 }
 
 header .header-content {
-  width: 700px;
+  width: 10px;
   margin: 0 auto;
+  padding-top: 10px;
 }
 
 header .header-content .name {
@@ -43,13 +44,13 @@ header .header-content .name {
 footer {
   font-size: 11px;
   opacity: 0.8;
-  width: 700px;
+  width: 10px;
   margin: 0 auto;
   margin-top: 110px;
 }
 
-.logo {
-  background-image: url('img/newnewglassesheader.png');
+a.logo {
+/*  background-image: url('img/newnewglassesheader.png');
   background-color: transparent;
   width: 300px;
   display: block;
@@ -61,16 +62,21 @@ footer {
   overflow: hidden;
   max-width: 110px;
   background-size: contain;
-  /* padding-top: 80px; */
-  /*border-top: solid black 9px;*/
   position: relative;
-  top: 9px;
-}
+  top: 9px;*/
 
-.logo:hover {
-  background-image: url('img/nameheaderhover.png');
+  font-family: 'Oswald';
+  color: white;
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 100;
+  text-decoration: none;
 }
-
+/*
+a.logo span {
+  color: #B0B0B0;
+}
+*/
 .logo {
   transition: all 0.5s ease;
 }
@@ -80,17 +86,18 @@ footer {
 }
 
 .content {
-  width: 700px;
+  width: 10px;
   margin: 0 auto;
+  font-family: 'Roboto';
+  font-weight: 300;
 }
 
 
 .page {
   padding: 23px 35px;
   background: #EDEDED;
-  border-radius: 10px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.25);
   overflow: auto;
+  border-top: 10px solid rgb(181, 211, 201);;
 }
 
 .page-title {
@@ -138,4 +145,30 @@ img.circle {
   text-transform: uppercase;
   font-weight: 100;
   font-size: 18px;
+}
+
+header .header-content,
+.content,
+footer {
+  width: 1000px;
+}
+
+@media screen and (max-width:900px)
+{
+  header .header-content,
+  .content,
+  footer {
+    width: 100%;
+  }
+  footer {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .content-container {
+    padding-top: 50px;
+  }
+  header .header-content {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
 }
