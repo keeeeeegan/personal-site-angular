@@ -1,0 +1,91 @@
+body {
+  color: #fff;
+  background: #000;
+}
+
+header {
+  background-color: #171F25
+}
+
+.content-container {
+  padding-top: 75px;
+}
+
+.page {
+  background: #000;
+  box-shadow: 0;
+  border: 0;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  padding:0;
+  border-radius: 0;
+}
+.page-title {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 55px;
+}
+
+textarea {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  width: 500px;
+  height: 125px;
+  border: solid #fff 1px;
+  padding: 4px;
+}
+
+input {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  border: 0;
+  border-bottom: solid 1px #fff;
+  width: 500px;
+  display: block;
+  padding: 4px;
+}
+
+.button {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  border: solid #fff 1px;
+  clear:both;
+  margin-top: 50px;
+  cursor: pointer;
+  padding: 4px;
+  width: 100px;
+}
+
+.thing-display {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.page-copy a:link,
+.page-copy a:visited,
+.page-copy a:active,
+.page-copy a:hover {
+  color: rgba(250, 250, 250, 0.6);
+  text-decoration: underline;
+}
+.page-copy a:hover {
+  color: #fff;
+}
+
+footer p a:link,
+footer p a:visited,
+footer p a:active,
+footer p a:hover {
+  color: rgba(250, 250, 250, 0.6);
+  text-decoration: underline;
+}
+
+footer p a:hover {
+  color: #fff;
+}

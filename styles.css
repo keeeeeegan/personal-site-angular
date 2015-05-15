@@ -1,7 +1,21 @@
+/* fonts */
+@font-face {
+    font-family: 'Tondu';
+    src: url('fonts/tondu_beta_beta-webfont.eot');
+    src: url('fonts/tondu_beta_beta-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/tondu_beta_beta-webfont.woff') format('woff'),
+         url('fonts/tondu_beta_beta-webfont.ttf') format('truetype'),
+         url('fonts/tondu_beta_beta-webfont.svg#tondu_betaregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 html, body {
   padding: 0;
   margin: 0;
+  background: #36A5A5;
+  color: #fff;
 }
 
 body {
@@ -18,7 +32,7 @@ a:link,
 a:visited,
 a:active,
 a:hover {
-color: #000;
+  color: #000;
   text-decoration: underline;
 }
 
@@ -29,16 +43,49 @@ a:hover {
 header {
   height: 80px;
   background-color: #1F1F1F;
+
+  transition: all 0.5s ease;
 }
 
 header .header-content {
   width: 10px;
   margin: 0 auto;
   padding-top: 10px;
+  position: relative;
 }
 
 header .header-content .name {
   text-transform: uppercase;
+}
+
+header nav {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+  text-decoration: right;
+}
+
+header nav li {
+  padding-left: 30px;
+  list-style: none;
+  display: inline-block;
+}
+
+header nav li a:link,
+header nav li a:visited,
+header nav li a:active,
+header nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+header nav li a:hover {
+  opacity: 0.8;
 }
 
 footer {
@@ -46,10 +93,71 @@ footer {
   opacity: 0.8;
   width: 10px;
   margin: 0 auto;
-  margin-top: 110px;
+  margin-bottom: 30px;
 }
 
-a.logo {
+
+.logotype {
+  padding: 0;
+  margin: 0 0 -20px 0;
+  display: inline-block;
+  float: left;
+  margin-top: 5px;
+}
+
+.logotype a {
+  font-family: 'Tondu', sans-serif;
+  font-size: 33px;
+  text-decoration: none;
+  font-weight: normal;
+  color: #fff;
+}
+
+.logotype a:hover {
+  text-decoration: none;
+}
+
+.logotype a > span:first-child {
+  text-transform: lowercase;
+  display: block;
+  line-height: 20px;
+}
+
+.logotype a > span:last-child {
+  text-transform: uppercase;
+
+  z-index: 50;
+  position: relative;
+}
+/* give the 'g' a border for the overlap */
+.logotype a > span > span.g {
+  text-shadow:
+   -1px -1px 0 #1F1F1F,
+    1px -1px 0 #1F1F1F,
+   -1px 1px 0 #1F1F1F,
+    1px 1px 0 #1F1F1F;
+
+  z-index: 100;
+    position: relative;
+}
+/* move the 'y' over a bit */
+.logotype a > span > span.y {
+  margin-left: -6px;
+}
+
+
+.logo {
+  display: block;
+  /*width: 280px;*/
+  position: relative;
+  margin-top: 2px;
+}
+
+.logo .subtitle {
+  display: none;
+}
+
+.logo > a {
 /*  background-image: url('img/newnewglassesheader.png');
   background-color: transparent;
   width: 300px;
@@ -65,11 +173,12 @@ a.logo {
   position: relative;
   top: 9px;*/
 
-  font-family: 'Oswald';
+  font-family: 'Oswald', sans-serif;
+  /*font-family: 'Montserrat', sans-serif;*/
   color: white;
   font-size: 40px;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 300;
   text-decoration: none;
 }
 /*
@@ -77,8 +186,17 @@ a.logo span {
   color: #B0B0B0;
 }
 */
-.logo {
+.logo > a {
   transition: all 0.5s ease;
+}
+
+
+.logo > a {
+  line-height: 26px;
+  font-size: 30px;
+}
+.logo span {
+  display: block;
 }
 
 .content-container {
@@ -89,15 +207,16 @@ a.logo span {
   width: 10px;
   margin: 0 auto;
   font-family: 'Roboto';
-  font-weight: 300;
+  font-weight: 400;
 }
-
 
 .page {
   padding: 23px 35px;
   background: #EDEDED;
   overflow: auto;
-  border-top: 10px solid rgb(181, 211, 201);;
+  border-top: 10px solid #1F1F1F;
+  margin-bottom: 90px;
+  /*border-top: 10px solid #8DC3C3;*/
 }
 
 .page-title {
@@ -127,24 +246,31 @@ img.circle {
   border-radius: 50%;
 }
 
+.bigtext {
+  font-size: 18px;
+}
+
+.section-head {
+  text-align: center;
+}
+
 .thing-display {
   background: white;
   border-radius: 3px;
   padding: 20px 10px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .thing-display > p {
   margin-bottom: 0;
 }
 
-
-
 .page-title {
   border-bottom: 1px solid #ccc;
   text-transform: uppercase;
   font-weight: 100;
-  font-size: 18px;
+  font-size: 28px;
 }
 
 header .header-content,
@@ -153,8 +279,162 @@ footer {
   width: 1000px;
 }
 
+/* black email page */
+/*body.email {
+  color: #fff;
+  background: #000;
+}
+
+body.email.content-container {
+  padding-top: 75px;
+}
+
+body.email .page {
+  background: #000;
+  box-shadow: 0;
+  border: 0;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  padding:0;
+  border-radius: 0;
+}
+body.email .page-title {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 55px;
+}
+
+body.email textarea {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  width: 500px;
+  height: 125px;
+  border: solid #fff 1px;
+  padding: 4px;
+}
+
+body.email input {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  border: 0;
+  border-bottom: solid 1px #fff;
+  width: 500px;
+  display: block;
+  padding: 4px;
+}
+
+body.email .button {
+  background: #000;
+  color: #fff;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  border: solid #fff 1px;
+  clear:both;
+  margin-top: 50px;
+  cursor: pointer;
+  padding: 4px;
+  width: 100px;
+}
+
+body.email .thing-display {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+body.email .page-copy a:link,
+body.email .page-copy a:visited,
+body.email .page-copy a:active,
+body.email .page-copy a:hover {
+  color: rgba(250, 250, 250, 0.6);
+  text-decoration: underline;
+}
+body.email .page-copy a:hover {
+  color: #fff;
+}
+
+body.email footer p a:link,
+body.email footer p a:visited,
+body.email footer p a:active,
+body.email footer p a:hover {
+  color: rgba(250, 250, 250, 0.6);
+  text-decoration: underline;
+}
+
+body.email footer p a:hover {
+  color: #fff;
+}
+*/
+
+body.home .logo > a {
+  line-height: 66px;
+  font-size: 70px;
+}
+
+body.home .logo {
+  margin-left: -2px;
+}
+
+body.home header {
+  height: 230px;
+}
+
+body.home .logo .subtitle {
+    display: block;
+  margin-top: -7px;
+  font-size: 23px;
+  color: #9B9B9B;
+  font-weight: 300;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 19px;
+  text-transform: uppercase;
+  padding-top: 7px;
+  margin-left: 3px;
+}
+
+/*html {
+  background: #1F1F1F;
+}
+
+.page {
+  background: transparent;
+  color: #fff;
+  padding: 23px 0;
+}
+
+.page-title {
+  color: #fff;
+}
+
+.content-container {
+  padding-top: 0;
+}*/
+
+
 @media screen and (max-width:900px)
 {
+  header,
+  body.about header,
+  header .header-content {
+    height: auto;
+
+  }
+  header nav {
+    position: relative;
+    top: auto;
+    padding-top:1em;
+    padding-bottom:1em;
+  }
+  header nav li {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  header nav li a {
+    font-size: 1.5em;
+  }
   header .header-content,
   .content,
   footer {
@@ -168,7 +448,47 @@ footer {
     padding-top: 50px;
   }
   header .header-content {
+    box-sizing: border-box;
     padding-left: 35px;
     padding-right: 35px;
   }
+  header nav {
+    right: auto;
+  }
+
+  .logo > a {
+    line-height: 66px;
+    font-size: 70px;
+  }
+
+  .logo {
+    margin-left: -2px;
+  }
+
+  .logo .subtitle {
+      display: block;
+    margin-top: -7px;
+    font-size: 23px;
+    color: #9B9B9B;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    text-transform: uppercase;
+    padding-top: 7px;
+    margin-left: 3px;
+  }
+
+  .page-title > span {
+    font-size: 14px;
+    float: none;
+    display: block;
+  }
+  .page .thing-display img {
+    max-width: 100% !important;
+  }
+
+  .my-photo {
+    display: none;
+  }
+
 }
