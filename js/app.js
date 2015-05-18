@@ -11,6 +11,10 @@ app.config( function ($routeProvider) {
       controller: 'aboutCtrl'
     })
     .when('/work', {
+      templateUrl: 'pages/resume.html',
+      controller: 'resumeCtrl'
+    })
+    .when('/projects', {
       templateUrl: 'pages/projects.html',
       controller: 'projectsCtrl'
     })
@@ -26,7 +30,7 @@ app.config( function ($routeProvider) {
     //   templateUrl: 'pages/contact.html',
     //   controller: 'contactCtrl'
     // })
-    .when('/resume', {
+    .when('/experience', {
       templateUrl: 'pages/resume.html',
       controller: 'resumeCtrl'
     })
@@ -51,6 +55,10 @@ app.controller('projectsCtrl', function ($scope, $rootScope) {
 
 app.controller('contactCtrl', function ($scope, $rootScope) {
   $rootScope.bodyClass = "email";
+});
+
+app.controller('resumeCtrl', function ($scope, $rootScope) {
+  $rootScope.bodyClass = "resume";
 });
 
 app.controller('thingCtrl', function ($scope, $rootScope) {
